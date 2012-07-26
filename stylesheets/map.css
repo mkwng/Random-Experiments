@@ -1,0 +1,460 @@
+@-webkit-keyframes animate-forward {
+  0% {
+    background-position: 0px 0; }
+
+  5% {
+    background-position: -220px 0; }
+
+  10% {
+    background-position: -440px 0; }
+
+  15% {
+    background-position: -660px 0; }
+
+  20% {
+    background-position: -880px 0; }
+
+  25% {
+    background-position: -1100px 0; }
+
+  30% {
+    background-position: -1320px 0; }
+
+  35% {
+    background-position: -1540px 0; }
+
+  40% {
+    background-position: -1760px 0; }
+
+  45% {
+    background-position: -1980px 0; }
+
+  50% {
+    background-position: -2200px 0; }
+
+  55% {
+    background-position: -2420px 0; }
+
+  60% {
+    background-position: -2640px 0; }
+
+  65% {
+    background-position: -2860px 0; }
+
+  70% {
+    background-position: -3080px 0; }
+
+  75% {
+    background-position: -3300px 0; }
+
+  80% {
+    background-position: -3520px 0; }
+
+  85% {
+    background-position: -3740px 0; }
+
+  90% {
+    background-position: -3960px 0; }
+
+  95% {
+    background-position: -4180px 0; }
+
+  100% {
+    background-position: -4180px 0; } }
+
+@-webkit-keyframes animate-forward-new {
+  0% {
+    background-position: 0px 0; }
+
+  3.33% {
+    background-position: -315px 0; }
+
+  6.66% {
+    background-position: -630px 0; }
+
+  10% {
+    background-position: -945px 0; }
+
+  13.33% {
+    background-position: -1260px 0; }
+
+  16.66% {
+    background-position: -1575px 0; }
+
+  20% {
+    background-position: -1890px 0; }
+
+  23.33% {
+    background-position: -2205px 0; }
+
+  26.66% {
+    background-position: -2520px 0; }
+
+  30% {
+    background-position: -2835px 0; }
+
+  33.33% {
+    background-position: -3150px 0; }
+
+  36.66% {
+    background-position: -3465px 0; }
+
+  40% {
+    background-position: -3780px 0; }
+
+  43.33% {
+    background-position: -4095px 0; }
+
+  46.66% {
+    background-position: -4410px 0; }
+
+  50% {
+    background-position: -4725px 0; }
+
+  53.33% {
+    background-position: -5040px 0; }
+
+  56.66% {
+    background-position: -5355px 0; }
+
+  60% {
+    background-position: -5670px 0; }
+
+  63.33% {
+    background-position: -5985px 0; }
+
+  66.66% {
+    background-position: -6300px 0; }
+
+  70% {
+    background-position: -6615px 0; }
+
+  73.33% {
+    background-position: -6930px 0; }
+
+  76.66% {
+    background-position: -7245px 0; }
+
+  80% {
+    background-position: -7560px 0; }
+
+  83.33% {
+    background-position: -7875px 0; }
+
+  86.66% {
+    background-position: -8190px 0; }
+
+  90% {
+    background-position: -8505px 0; }
+
+  93.33% {
+    background-position: -8820px 0; }
+
+  96.66% {
+    background-position: -9135px 0; }
+
+  100% {
+    background-position: -9135px 0; } }
+
+body {
+  color: #6d6d6d; }
+
+.map {
+  width: 3200px;
+  height: 1800px;
+  background: url(../images/map.png); }
+  .map .employee {
+    position: absolute;
+    width: 70px;
+    height: 196px;
+    cursor: pointer;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    /* Firefox 4 */
+    -webkit-transition-delay: 0s;
+    /* Safari and Chrome */
+    -o-transition-delay: 0s;
+    /* Opera */ }
+    .map .employee .employee-popup {
+      width: 140px;
+      height: 196px;
+      background: url(../images/popup.png) no-repeat bottom left;
+      background-size: 2800px;
+      opacity: 0.75;
+      -webkit-transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      transition: all 0.6s ease-in-out;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0s;
+      /* Opera */ }
+      .map .employee .employee-popup .employee-profile {
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .map .employee .employee-popup .employee-profile .employee-profile-picture {
+          width: 45px;
+          height: 45px;
+          margin-top: 147px;
+          margin-left: 0px;
+          -webkit-transition: all 0.6s ease-in-out;
+          -moz-transition: all 0.6s ease-in-out;
+          -o-transition: all 0.6s ease-in-out;
+          -ms-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+          transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          /* Firefox 4 */
+          -webkit-transition-delay: 0s;
+          /* Safari and Chrome */
+          -o-transition-delay: 0s;
+          /* Opera */
+          -moz-border-radius: 23px;
+          -webkit-border-radius: 23px;
+          border-radius: 23px;
+          overflow: hidden; }
+        .map .employee .employee-popup .employee-profile .employee-profile-data {
+          opacity: 0;
+          position: absolute;
+          width: 1px;
+          height: 60px;
+          padding: 14px 10px 6px 50px;
+          top: 76px;
+          left: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+          -webkit-transition: all 0.3s ease-out;
+          -moz-transition: all 0.3s ease-out;
+          -o-transition: all 0.3s ease-out;
+          -ms-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+          transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          /* Firefox 4 */
+          -webkit-transition-delay: 0s;
+          /* Safari and Chrome */
+          -o-transition-delay: 0s;
+          /* Opera */ }
+          .map .employee .employee-popup .employee-profile .employee-profile-data p {
+            text-transform: uppercase;
+            line-height: 3px;
+            font-size: 12px; }
+            .map .employee .employee-popup .employee-profile .employee-profile-data p.employee-profile-data-name {
+              font-weight: bold; }
+    .map .employee .employee-shadow {
+      background: url(../images/popup-shadow.png) no-repeat center;
+      background-size: 27px;
+      width: 40px;
+      height: 26px;
+      position: absolute;
+      bottom: -13px;
+      left: 2px;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0s;
+      /* Opera */
+      opacity: 1; }
+    .map .employee .employee-desk {
+      position: absolute;
+      width: 132px;
+      height: 76px; }
+      .map .employee .employee-desk.ns {
+        bottom: -45px;
+        left: -44px;
+        background: url(../images/desk-ns.png) no-repeat center; }
+        .map .employee .employee-desk.ns .active {
+          width: 132px;
+          height: 76px;
+          background: url(../images/desk-ns-active.png) no-repeat center;
+          -webkit-transition: all 0.6s ease-in-out;
+          -moz-transition: all 0.6s ease-in-out;
+          -o-transition: all 0.6s ease-in-out;
+          -ms-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+          transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          /* Firefox 4 */
+          -webkit-transition-delay: 0s;
+          /* Safari and Chrome */
+          -o-transition-delay: 0s;
+          /* Opera */
+          opacity: 0; }
+      .map .employee .employee-desk.ew {
+        bottom: -45px;
+        left: -44px;
+        background: url(../images/desk-ew.png) no-repeat center; }
+        .map .employee .employee-desk.ew .active {
+          width: 132px;
+          height: 76px;
+          background: url(../images/desk-ew-active.png) no-repeat center;
+          opacity: 0;
+          -webkit-transition: all 0.6s ease-in-out;
+          -moz-transition: all 0.6s ease-in-out;
+          -o-transition: all 0.6s ease-in-out;
+          -ms-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+          transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          /* Firefox 4 */
+          -webkit-transition-delay: 0s;
+          /* Safari and Chrome */
+          -o-transition-delay: 0s;
+          /* Opera */ }
+    .map .employee:hover .employee-desk.ns .active {
+      opacity: 1; }
+    .map .employee:hover .employee-desk.ew .active {
+      opacity: 1; }
+    .map .employee:hover .employee-popup {
+      margin-left: -10px;
+      margin-top: -20px;
+      width: 220px;
+      background-size: 4400px;
+      opacity: 1;
+      -webkit-animation-delay: .6s;
+      -webkit-animation-duration: .2s;
+      -webkit-animation-timing-function: step-start;
+      -webkit-animation-name: animate-forward;
+      -webkit-animation-fill-mode: forwards; }
+    .map .employee:hover .employee-profile .employee-profile-picture {
+      margin-top: 84px;
+      margin-left: -13px;
+      width: 72px;
+      height: 72px;
+      -moz-border-radius: 36px;
+      -webkit-border-radius: 36px;
+      border-radius: 36px; }
+    .map .employee:hover .employee-profile .employee-profile-data {
+      opacity: 1;
+      width: 300px;
+      -webkit-transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      transition: all 0.6s ease-in-out;
+      transition-delay: 0.4s;
+      -moz-transition-delay: 0.4s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0.4s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0.4s;
+      /* Opera */ }
+    .map .employee:hover .employee-shadow {
+      background-size: 40px;
+      bottom: -15px;
+      opacity: 0.3; }
+  .map .employee.test {
+    width: 60px;
+    height: 65px;
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    perspective: 2000px; }
+    .map .employee.test .employee-popup {
+      position: absolute;
+      width: 60px;
+      height: 65px;
+      background: url(../images/popup-flat.png) no-repeat bottom left;
+      background-size: 6014px;
+      opacity: 1;
+      -webkit-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
+      -moz-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
+      -o-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
+      -ms-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
+      transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg); }
+      .map .employee.test .employee-popup .employee-profile {
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+        transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        /* Firefox 4 */
+        -webkit-transition-delay: 0s;
+        /* Safari and Chrome */
+        -o-transition-delay: 0s;
+        /* Opera */ }
+        .map .employee.test .employee-popup .employee-profile .employee-profile-picture {
+          width: 40px;
+          height: 40px;
+          margin-top: 7px;
+          margin-left: 6px; }
+        .map .employee.test .employee-popup .employee-profile .employee-profile-data {
+          top: 0px;
+          padding: 14px 10px 6px 65px; }
+          .map .employee.test .employee-popup .employee-profile .employee-profile-data p {
+            line-height: 0px; }
+    .map .employee.test .employee-shadow {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0.2s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0.2s;
+      /* Opera */
+      left: 5px;
+      bottom: -11px; }
+    .map .employee.test .employee-desk.ns {
+      bottom: -40px; }
+    .map .employee.test .employee-desk.ew {
+      bottom: -40px; }
+    .map .employee.test:hover .employee-popup, .map .employee.test.active .employee-popup {
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      -ms-transform: none;
+      transform: none;
+      width: 315px;
+      height: 102px;
+      background-size: 9450px;
+      top: -60px;
+      left: -10px;
+      -webkit-animation-name: animate-forward-new; }
+      .map .employee.test:hover .employee-popup .employee-profile, .map .employee.test.active .employee-popup .employee-profile {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -ms-transform: none;
+        transform: none; }
+        .map .employee.test:hover .employee-popup .employee-profile .employee-profile-picture, .map .employee.test.active .employee-popup .employee-profile .employee-profile-picture {
+          width: 64px;
+          height: 64px;
+          margin-top: 8px; }
+    .map .employee.test:hover .employee-shadow, .map .employee.test.active .employee-shadow {
+      opacity: 0;
+      background-size: 27px;
+      margin-left: 10px;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0s;
+      /* Opera */ }

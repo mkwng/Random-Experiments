@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Playing with Paper.js</title>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+
+  <style>
+  body {background:#1e1e1e;}
+  </style>
+
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+
+  <script src="js/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+    <canvas id="myCanvas" resize="true">
+</canvas>
+
+
+  <!-- Included JS Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/paper.js"></script>
+  <script src="js/app.js"></script>
+
+  <script type="text/paperscript" canvas="myCanvas" >
+
+
+// All newly created items will receive 
+// these style properties: 
+project.currentStyle = { 
+        fillColor: 'white', 
+        strokeColor: 'white', 
+        strokeWidth: 6
+}; 
+
+var path,path2,unitedPath,unitedPath2; 
+
+a = new RGBColor(1,1,1,.6); 
+b = new RGBColor(1,1,1,.8); 
+var gradient = new Gradient([a,b], 'radial'); 
+
+path = new Path.Circle(new Point(200, 200), 100);
+path.segments[0].handleIn.y+=30;
+path.segments[2].handleOut.y+=30;
+path.segments[3].point.y+=60;
+path.segments[3].handleIn.x=0;
+path.segments[3].handleOut.x=0;
+
+path2 = new Path.Rectangle(new Point(200,100), new Size(600,150));
+
+unitedPath = new CompoundPath([path,path2]);
+
+// path.remove();
+// path2.remove();
+
+// Fill the path with a gradient color that runs from its center, 
+// to the right center of its bounding rectangle: 
+var from = path.position; 
+var to = path.bounds.rightCenter; 
+var gradientColor = new GradientColor(gradient, from, to); 
+// path.fillColor = gradientColor;
+// path2.fillColor = gradientColor;
+unitedPath.fillColor = gradientColor;
+
+  </script>
+
+</body>
+</html>
+
+
+
+
+

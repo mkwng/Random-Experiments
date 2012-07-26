@@ -1,0 +1,364 @@
+@mixin transition($arg:all .6s ease-in-out, $delay:0s) {
+	-webkit-transition: $arg;
+    -moz-transition: $arg;
+    -o-transition: $arg;
+    -ms-transition: $arg;
+    transition: $arg;
+
+    transition-delay: $delay;
+	-moz-transition-delay: $delay; /* Firefox 4 */
+	-webkit-transition-delay: $delay; /* Safari and Chrome */
+	-o-transition-delay: $delay; /* Opera */
+}
+@mixin border-radius($arg:50px) {
+	-moz-border-radius: $arg;
+    -webkit-border-radius: $arg;
+    border-radius: $arg;
+}
+
+@mixin opacity($arg:1) {
+	opacity:$arg;
+}
+@mixin transform($arg) {
+			-webkit-transform: $arg;
+		    -moz-transform: $arg;
+		    -o-transform: $arg;
+		    -ms-transform: $arg;
+		    transform: $arg;
+}
+@mixin box-shadow($arg:-5px -5px #888) {
+	-moz-box-shadow: $arg;
+	-webkit-box-shadow: $arg;
+	box-shadow: $arg;
+}
+@mixin perspective($arg:2000px) {
+	-webkit-perspective:$arg;
+    -moz-perspective:$arg;
+    perspective:$arg;
+}
+
+$frameWidth: -220px;
+@-webkit-keyframes animate-forward {
+ 0%			{ background-position:  $frameWidth*0 0; }
+ 5%			{ background-position:  $frameWidth*1 0; }
+10%			{ background-position:  $frameWidth*2 0; }
+15%			{ background-position:  $frameWidth*3 0; }
+20%			{ background-position:  $frameWidth*4 0; }
+25%			{ background-position:  $frameWidth*5 0; }
+30%			{ background-position:  $frameWidth*6 0; }
+35%			{ background-position:  $frameWidth*7 0; }
+40%			{ background-position:  $frameWidth*8 0; }
+45%			{ background-position:  $frameWidth*9 0; }
+50%			{ background-position:  $frameWidth*10 0; }
+55%			{ background-position:  $frameWidth*11 0; }
+60%			{ background-position:  $frameWidth*12 0; }
+65%			{ background-position:  $frameWidth*13 0; }
+70%			{ background-position:  $frameWidth*14 0; }
+75%			{ background-position:  $frameWidth*15 0; }
+80%			{ background-position:  $frameWidth*16 0; }
+85%			{ background-position:  $frameWidth*17 0; }
+90%			{ background-position:  $frameWidth*18 0; }
+95%			{ background-position:  $frameWidth*19 0; }
+100%		{ background-position:  $frameWidth*19 0; }
+}
+
+$frameWidth-new: -315px;
+@-webkit-keyframes animate-forward-new {
+0%		{ background-position:  $frameWidth-new*0 0; }
+3.33%		{ background-position:  $frameWidth-new*1 0; }
+6.66%		{ background-position:  $frameWidth-new*2 0; }
+10%			{ background-position:  $frameWidth-new*3 0; }
+13.33%		{ background-position:  $frameWidth-new*4 0; }
+16.66%		{ background-position:  $frameWidth-new*5 0; }
+20%			{ background-position:  $frameWidth-new*6 0; }
+23.33%		{ background-position:  $frameWidth-new*7 0; }
+26.66%		{ background-position:  $frameWidth-new*8 0; }
+30%			{ background-position:  $frameWidth-new*9 0; }
+33.33%		{ background-position:  $frameWidth-new*10 0; }
+36.66%		{ background-position:  $frameWidth-new*11 0; }
+40%			{ background-position:  $frameWidth-new*12 0; }
+43.33%		{ background-position:  $frameWidth-new*13 0; }
+46.66%		{ background-position:  $frameWidth-new*14 0; }
+50%			{ background-position:  $frameWidth-new*15 0; }
+53.33%		{ background-position:  $frameWidth-new*16 0; }
+56.66%		{ background-position:  $frameWidth-new*17 0; }
+60%			{ background-position:  $frameWidth-new*18 0; }
+63.33%		{ background-position:  $frameWidth-new*19 0; }
+66.66%		{ background-position:  $frameWidth-new*20 0; }
+70%			{ background-position:  $frameWidth-new*21 0; }
+73.33%		{ background-position:  $frameWidth-new*22 0; }
+76.66%		{ background-position:  $frameWidth-new*23 0; }
+80%			{ background-position:  $frameWidth-new*24 0; }
+83.33%		{ background-position:  $frameWidth-new*25 0; }
+86.66%		{ background-position:  $frameWidth-new*26 0; }
+90%			{ background-position:  $frameWidth-new*27 0; }
+93.33%		{ background-position:  $frameWidth-new*28 0; }
+96.66%		{ background-position:  $frameWidth-new*29 0; }
+100%		{ background-position:  $frameWidth-new*29 0; }
+}
+
+body{
+	color:#6d6d6d;
+}
+
+.map {
+	width:3200px;
+	height:1800px;
+	background:url(../images/map.png);
+
+	.employee {
+		position:absolute;
+		width:70px;
+		height:196px;
+		cursor:pointer;
+
+	    @include transition;
+
+
+
+		.employee-popup {
+			width:140px;
+			height:196px;
+			background:url(../images/popup.png) no-repeat bottom left;
+			background-size:2800px;
+			@include opacity(.75);
+			@include transition;
+
+
+			.employee-profile {
+				position:absolute;
+				top:0;
+				left:0;
+
+			    .employee-profile-picture {
+					width: 45px;
+					height: 45px;
+					margin-top: 147px;
+					margin-left: 0px;
+					@include transition;
+					@include border-radius(23px);
+
+					overflow: hidden;
+
+			    }
+			    .employee-profile-data {
+			    	@include opacity(0);
+			    	position:absolute;
+			    	width:1px;
+			    	height:60px;
+			    	padding:14px 10px 6px 50px;
+			    	top:76px;
+			    	left:20px;
+			    	overflow:hidden;
+			    	white-space:nowrap;
+			    	@include transition(all .3s ease-out);
+
+			    	p {
+			    		text-transform:uppercase;
+			    		line-height:3px;
+			    		font-size:12px;
+			    		&.employee-profile-data-name {
+			    			font-weight:bold;
+			    		}
+			    	}
+			    }
+			}
+
+		}
+
+		.employee-shadow {
+			background:url(../images/popup-shadow.png) no-repeat center;
+			background-size:27px;
+			width:40px;
+			height:26px;
+			position: absolute;
+			bottom: -13px;
+			left: 2px;
+		    @include transition(all .3s ease-out);
+			@include opacity(1);
+		}
+
+		.employee-desk {
+			position:absolute;
+			width:132px;
+			height:76px;
+
+			&.ns {
+				bottom: -45px;
+				left: -44px;
+				background:url(../images/desk-ns.png) no-repeat center;
+
+				.active {
+					width:132px;
+					height:76px;
+					background:url(../images/desk-ns-active.png) no-repeat center;
+					@include transition;
+					@include opacity(0);
+				}
+			}
+
+			&.ew {
+				bottom: -45px;
+				left: -44px;
+				background:url(../images/desk-ew.png) no-repeat center;
+				.active {
+					width:132px;
+					height:76px;
+					background:url(../images/desk-ew-active.png) no-repeat center;
+					@include opacity(0);
+					@include transition;
+				}
+			} 
+		}
+
+		&:hover {
+
+			.employee-desk {
+				&.ns .active {
+				@include opacity(1);
+				}
+				&.ew .active {
+				@include opacity(1);
+				}
+			}
+			.employee-popup {
+				margin-left:-10px;
+				margin-top:-20px;
+				width:220px;
+				background-size:4400px;
+				@include opacity(1);
+
+				-webkit-animation-delay:.6s;
+				-webkit-animation-duration:.2s;
+				-webkit-animation-timing-function:step-start;
+				-webkit-animation-name:animate-forward;
+				-webkit-animation-fill-mode:forwards;
+			}
+
+			.employee-profile {
+			    .employee-profile-picture {
+			    	margin-top:84px;
+					margin-left:-13px;
+			    	width:72px;
+			    	height:72px;
+			    	@include border-radius(36px);
+			    }
+			    .employee-profile-data {
+			    	@include opacity(1);
+			    	width:300px;
+		    		@include transition(all .6s ease-in-out, .4s);
+			    }
+			}
+			.employee-shadow {
+				background-size:40px;
+				bottom: -15px;
+				@include opacity(.3);
+			}
+		}
+
+	}
+
+	.employee.test {
+		width:60px;
+		height:65px;
+		@include perspective;
+
+
+		.employee-popup {
+			position:absolute;
+			width:60px;
+			height:65px;
+			background:url(../images/popup-flat.png) no-repeat bottom left;
+			background-size:6014px;
+			@include opacity(1);
+
+			@include transform(rotateY(52deg) rotateX(-20deg) rotateZ(-22deg));
+
+			.employee-profile {
+				@include transition;
+
+			    .employee-profile-picture {
+				width:40px;
+				height:40px;
+				margin-top:7px;
+				margin-left:6px;
+
+			    }
+			    .employee-profile-data {
+				    top:0px;
+				    padding:14px 10px 6px 65px;
+			    	p {
+			    		line-height:0px;
+			    		&.employee-profile-data-name {
+			    		}
+			    	}
+			    }
+			}
+
+		}
+
+		.employee-shadow {
+    		@include transition(all .4s ease-in-out, .2s);
+			left: 5px;
+			bottom: -11px;
+		}
+
+		.employee-desk {
+
+			&.ns {
+				bottom: -40px;
+				.active {
+				}
+			}
+
+			&.ew {
+				bottom: -40px;
+				.active {
+				}
+			} 
+		}
+
+		&:hover, &.active {
+
+			.employee-desk {
+				&.ns .active {
+				}
+				&.ew .active {
+				}
+			}
+			.employee-popup {
+				@include transform(none);
+				width:315px;
+				height:102px;
+				background-size:9450px;
+				top:-60px;
+				left:-10px;
+
+				-webkit-animation-name:animate-forward-new;
+
+
+				.employee-profile {
+					@include transform(none);
+
+				    .employee-profile-picture {
+						width:64px;
+						height:64px;
+						margin-top: 8px;
+				    }
+				    .employee-profile-data {
+				    }
+				}
+
+			}
+
+			.employee-shadow {
+				@include opacity(0);
+				background-size:27px;
+				margin-left:10px;
+    			@include transition(all .4s ease-in-out, 0s);
+			}
+		}
+
+	}
+
+}
