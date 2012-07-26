@@ -168,11 +168,11 @@ body {
     width: 70px;
     height: 196px;
     cursor: pointer;
-    -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
-    -ms-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transition-delay: 0s;
     -moz-transition-delay: 0s;
     /* Firefox 4 */
@@ -186,11 +186,11 @@ body {
       background: url(../images/popup.png) no-repeat bottom left;
       background-size: 2800px;
       opacity: 0.75;
-      -webkit-transition: all 0.6s ease-in-out;
-      -moz-transition: all 0.6s ease-in-out;
-      -o-transition: all 0.6s ease-in-out;
-      -ms-transition: all 0.6s ease-in-out;
-      transition: all 0.6s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       transition-delay: 0s;
       -moz-transition-delay: 0s;
       /* Firefox 4 */
@@ -203,15 +203,16 @@ body {
         top: 0;
         left: 0; }
         .map .employee .employee-popup .employee-profile .employee-profile-picture {
+          /*position:relative;*/
           width: 45px;
           height: 45px;
           margin-top: 147px;
           margin-left: 0px;
-          -webkit-transition: all 0.6s ease-in-out;
-          -moz-transition: all 0.6s ease-in-out;
-          -o-transition: all 0.6s ease-in-out;
-          -ms-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           transition-delay: 0s;
           -moz-transition-delay: 0s;
           /* Firefox 4 */
@@ -223,6 +224,42 @@ body {
           -webkit-border-radius: 23px;
           border-radius: 23px;
           overflow: hidden; }
+          .map .employee .employee-popup .employee-profile .employee-profile-picture::after {
+            position: absolute;
+            top: 8px;
+            bottom: 0;
+            left: 8px;
+            right: 0;
+            content: "";
+            z-index: 2;
+            pointer-events: none;
+            /* "all" disables mouse access to image */
+            /*background:red;*/
+            -moz-border-radius: 36px;
+            -webkit-border-radius: 36px;
+            border-radius: 36px;
+            -moz-box-shadow: inset 0 0 10px black;
+            -webkit-box-shadow: inset 0 0 10px black;
+            box-shadow: inset 0 0 10px black;
+            opacity: 0.5; }
+          .map .employee .employee-popup .employee-profile .employee-profile-picture img.bw {
+            position: relative;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            /* Firefox 4 */
+            -webkit-transition-delay: 0s;
+            /* Safari and Chrome */
+            -o-transition-delay: 0s;
+            /* Opera */
+            top: -42px;
+            -moz-border-radius: 36px;
+            -webkit-border-radius: 36px;
+            border-radius: 36px; }
         .map .employee .employee-popup .employee-profile .employee-profile-data {
           opacity: 0;
           position: absolute;
@@ -233,11 +270,11 @@ body {
           left: 20px;
           overflow: hidden;
           white-space: nowrap;
-          -webkit-transition: all 0.3s ease-out;
-          -moz-transition: all 0.3s ease-out;
-          -o-transition: all 0.3s ease-out;
-          -ms-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+          -webkit-transition: all 0.15s ease-out;
+          -moz-transition: all 0.15s ease-out;
+          -o-transition: all 0.15s ease-out;
+          -ms-transition: all 0.15s ease-out;
+          transition: all 0.15s ease-out;
           transition-delay: 0s;
           -moz-transition-delay: 0s;
           /* Firefox 4 */
@@ -259,11 +296,11 @@ body {
       position: absolute;
       bottom: -13px;
       left: 2px;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.15s ease-out;
+      -moz-transition: all 0.15s ease-out;
+      -o-transition: all 0.15s ease-out;
+      -ms-transition: all 0.15s ease-out;
+      transition: all 0.15s ease-out;
       transition-delay: 0s;
       -moz-transition-delay: 0s;
       /* Firefox 4 */
@@ -284,11 +321,11 @@ body {
           width: 132px;
           height: 76px;
           background: url(../images/desk-ns-active.png) no-repeat center;
-          -webkit-transition: all 0.6s ease-in-out;
-          -moz-transition: all 0.6s ease-in-out;
-          -o-transition: all 0.6s ease-in-out;
-          -ms-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           transition-delay: 0s;
           -moz-transition-delay: 0s;
           /* Firefox 4 */
@@ -306,11 +343,11 @@ body {
           height: 76px;
           background: url(../images/desk-ew-active.png) no-repeat center;
           opacity: 0;
-          -webkit-transition: all 0.6s ease-in-out;
-          -moz-transition: all 0.6s ease-in-out;
-          -o-transition: all 0.6s ease-in-out;
-          -ms-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           transition-delay: 0s;
           -moz-transition-delay: 0s;
           /* Firefox 4 */
@@ -328,8 +365,8 @@ body {
       width: 220px;
       background-size: 4400px;
       opacity: 1;
-      -webkit-animation-delay: .6s;
-      -webkit-animation-duration: .2s;
+      -webkit-animation-delay: .3s;
+      -webkit-animation-duration: .15s;
       -webkit-animation-timing-function: step-start;
       -webkit-animation-name: animate-forward;
       -webkit-animation-fill-mode: forwards; }
@@ -341,25 +378,41 @@ body {
       -moz-border-radius: 36px;
       -webkit-border-radius: 36px;
       border-radius: 36px; }
+      .map .employee:hover .employee-profile .employee-profile-picture img.bw {
+        opacity: 0;
+        top: -72px; }
     .map .employee:hover .employee-profile .employee-profile-data {
       opacity: 1;
       width: 300px;
-      -webkit-transition: all 0.6s ease-in-out;
-      -moz-transition: all 0.6s ease-in-out;
-      -o-transition: all 0.6s ease-in-out;
-      -ms-transition: all 0.6s ease-in-out;
-      transition: all 0.6s ease-in-out;
-      transition-delay: 0.4s;
-      -moz-transition-delay: 0.4s;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
       /* Firefox 4 */
-      -webkit-transition-delay: 0.4s;
+      -webkit-transition-delay: 0.2s;
       /* Safari and Chrome */
-      -o-transition-delay: 0.4s;
+      -o-transition-delay: 0.2s;
       /* Opera */ }
     .map .employee:hover .employee-shadow {
-      background-size: 40px;
       bottom: -15px;
-      opacity: 0.3; }
+      opacity: 0;
+      background-size: 27px;
+      margin-left: 10px;
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+      -ms-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0s;
+      /* Opera */ }
   .map .employee.test {
     width: 60px;
     height: 65px;
@@ -370,7 +423,7 @@ body {
       position: absolute;
       width: 60px;
       height: 65px;
-      background: url(../images/popup-flat.png) no-repeat bottom left;
+      background: url(../images/popup-outline.png) no-repeat bottom left;
       background-size: 6014px;
       opacity: 1;
       -webkit-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
@@ -379,11 +432,11 @@ body {
       -ms-transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg);
       transform: rotateY(52deg) rotateX(-20deg) rotateZ(-22deg); }
       .map .employee.test .employee-popup .employee-profile {
-        -webkit-transition: all 0.6s ease-in-out;
-        -moz-transition: all 0.6s ease-in-out;
-        -o-transition: all 0.6s ease-in-out;
-        -ms-transition: all 0.6s ease-in-out;
-        transition: all 0.6s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transition-delay: 0s;
         -moz-transition-delay: 0s;
         /* Firefox 4 */
@@ -395,24 +448,24 @@ body {
           width: 40px;
           height: 40px;
           margin-top: 7px;
-          margin-left: 6px; }
+          margin-left: 5px; }
         .map .employee.test .employee-popup .employee-profile .employee-profile-data {
           top: 0px;
           padding: 14px 10px 6px 65px; }
           .map .employee.test .employee-popup .employee-profile .employee-profile-data p {
             line-height: 0px; }
     .map .employee.test .employee-shadow {
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -ms-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-      transition-delay: 0.2s;
-      -moz-transition-delay: 0.2s;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      transition-delay: 0.15s;
+      -moz-transition-delay: 0.15s;
       /* Firefox 4 */
-      -webkit-transition-delay: 0.2s;
+      -webkit-transition-delay: 0.15s;
       /* Safari and Chrome */
-      -o-transition-delay: 0.2s;
+      -o-transition-delay: 0.15s;
       /* Opera */
       left: 5px;
       bottom: -11px; }
@@ -429,7 +482,7 @@ body {
       width: 315px;
       height: 102px;
       background-size: 9450px;
-      top: -60px;
+      top: -40px;
       left: -10px;
       -webkit-animation-name: animate-forward-new; }
       .map .employee.test:hover .employee-popup .employee-profile, .map .employee.test.active .employee-popup .employee-profile {
@@ -441,20 +494,5 @@ body {
         .map .employee.test:hover .employee-popup .employee-profile .employee-profile-picture, .map .employee.test.active .employee-popup .employee-profile .employee-profile-picture {
           width: 64px;
           height: 64px;
+          margin-left: 8px;
           margin-top: 8px; }
-    .map .employee.test:hover .employee-shadow, .map .employee.test.active .employee-shadow {
-      opacity: 0;
-      background-size: 27px;
-      margin-left: 10px;
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -ms-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
-      transition-delay: 0s;
-      -moz-transition-delay: 0s;
-      /* Firefox 4 */
-      -webkit-transition-delay: 0s;
-      /* Safari and Chrome */
-      -o-transition-delay: 0s;
-      /* Opera */ }
