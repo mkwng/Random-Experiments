@@ -194,10 +194,12 @@ body {
   height: 1800px;
   background: url(../images/map.png); }
   .map .employee {
+    display: block;
     position: absolute;
     cursor: pointer;
     width: 60px;
     height: 65px;
+    color: #6d6d6d;
     -webkit-perspective: 2000px;
     -moz-perspective: 2000px;
     perspective: 2000px;
@@ -351,17 +353,17 @@ body {
       position: absolute;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
-      -webkit-transition: all 0.15s ease-in-out;
-      -moz-transition: all 0.15s ease-in-out;
-      -o-transition: all 0.15s ease-in-out;
-      -ms-transition: all 0.15s ease-in-out;
-      transition: all 0.15s ease-in-out;
-      transition-delay: 0.15s;
-      -moz-transition-delay: 0.15s;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
       /* Firefox 4 */
-      -webkit-transition-delay: 0.15s;
+      -webkit-transition-delay: 0s;
       /* Safari and Chrome */
-      -o-transition-delay: 0.15s;
+      -o-transition-delay: 0s;
       /* Opera */
       left: 5px;
       bottom: -11px; }
@@ -442,7 +444,7 @@ body {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
     .map .employee:hover .employee-popup, .map .employee.active .employee-popup {
-      margin-left: -10px;
+      margin-left: -4px;
       margin-top: -20px;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1;
@@ -456,16 +458,11 @@ body {
       background-size: 9450px;
       top: -40px;
       left: -10px;
-      -webkit-animation-delay: .3s;
-      -webkit-animation-duration: .15s;
-      -webkit-animation-timing-function: step-start;
-      -webkit-animation-fill-mode: forwards;
-      -webkit-animation-name: animate-forward-new;
-      -moz-animation-delay: .3s;
-      -moz-animation-duration: .15s;
-      -moz-animation-timing-function: step-start;
-      -moz-animation-fill-mode: forwards;
-      -moz-animation-name: animate-forward-new; }
+      -webkit-animation: animate-forward-new 0.15s step-start 0.3s 1 forwards;
+      -moz-animation: animate-forward-new 0.15s step-start 0.3s 1 forwards;
+      -o-animation: animate-forward-new 0.15s step-start 0.3s 1 forwards;
+      -ms-animation: animate-forward-new 0.15s step-start 0.3s 1 forwards;
+      animation: animate-forward-new 0.15s step-start 0.3s 1 forwards; }
       .map .employee:hover .employee-popup .employee-profile .employee-profile-picture, .map .employee.active .employee-popup .employee-profile .employee-profile-picture {
         width: 64px;
         height: 64px;
@@ -495,16 +492,13 @@ body {
         -o-transition-delay: 0.2s;
         /* Opera */ }
     .map .employee:hover .employee-shadow, .map .employee.active .employee-shadow {
-      bottom: -15px;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-      opacity: 0;
-      background-size: 27px;
-      margin-left: 10px;
-      -webkit-transition: all 0.15s ease-in-out;
-      -moz-transition: all 0.15s ease-in-out;
-      -o-transition: all 0.15s ease-in-out;
-      -ms-transition: all 0.15s ease-in-out;
-      transition: all 0.15s ease-in-out;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+      opacity: 0.2;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      transition: all 0.3s linear;
       transition-delay: 0s;
       -moz-transition-delay: 0s;
       /* Firefox 4 */

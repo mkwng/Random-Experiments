@@ -39,6 +39,14 @@
     perspective:$arg;
 }
 
+@mixin animation($arg) {
+	-webkit-animation: $arg;
+    -moz-animation: $arg;
+    -o-animation: $arg;
+    -ms-animation: $arg;
+    animation: $arg;
+}
+
 $frameWidth-new: -315px;
 @-webkit-keyframes animate-forward-new {
 0%		{ background-position:  $frameWidth-new*0 0; }
@@ -117,10 +125,12 @@ body{
 	background:url(../images/map.png);
 
 	.employee {
+		display:block;
 		position:absolute;
 		cursor:pointer;
 		width:60px;
 		height:65px;
+		color:#6d6d6d;
 		@include perspective;
 
 	    @include transition;
@@ -214,7 +224,7 @@ body{
 			height:26px;
 			position: absolute;
 			@include opacity(1);
-    		@include transition(all .15s ease-in-out, .15s);
+    		@include transition(all .3s ease-in-out);
 			left: 5px;
 			bottom: -11px;
 		}
@@ -281,7 +291,7 @@ body{
 				}
 			}
 			.employee-popup {
-				margin-left:-10px;
+				margin-left:-4px;
 				margin-top:-20px;
 				@include opacity(1);
 				@include transform(none);
@@ -290,18 +300,7 @@ body{
 				background-size:9450px;
 				top:-40px;
 				left:-10px;
-
-				-webkit-animation-delay:.3s;
-				-webkit-animation-duration:.15s;
-				-webkit-animation-timing-function:step-start;
-				-webkit-animation-fill-mode:forwards;
-				-webkit-animation-name:animate-forward-new;
-
-				-moz-animation-delay:.3s;
-				-moz-animation-duration:.15s;
-				-moz-animation-timing-function:step-start;
-				-moz-animation-fill-mode:forwards;
-				-moz-animation-name:animate-forward-new;
+				@include animation(animate-forward-new .15s step-start .3s 1 forwards);
 
 				.employee-profile {
 				    .employee-profile-picture {
@@ -328,11 +327,9 @@ body{
 
 
 			.employee-shadow {
-				bottom: -15px;
-				@include opacity(0);
-				background-size:27px;
-				margin-left:10px;
-    			@include transition(all .15s ease-in-out, 0s);
+				@include opacity(.2);
+    			@include transition(all .3s linear, 0s);
+
 			}
 		}
 
