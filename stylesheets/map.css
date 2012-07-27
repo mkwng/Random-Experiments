@@ -390,7 +390,18 @@ body {
           -o-transition-delay: 0s;
           /* Opera */
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-          opacity: 0; }
+          opacity: 0;
+          background-position: 0 0; }
+        .map .employee .employee-desk.ns.red .active {
+          background-position: 0 -76px; }
+        .map .employee .employee-desk.ns.blue .active {
+          background-position: 0 -152px; }
+        .map .employee .employee-desk.ns.green .active {
+          background-position: 0 -228px; }
+        .map .employee .employee-desk.ns.black .active {
+          background-position: 0 -304px; }
+        .map .employee .employee-desk.ns.white .active {
+          background-position: 0 -380px; }
       .map .employee .employee-desk.ew {
         bottom: -40px;
         left: -44px;
@@ -412,14 +423,25 @@ body {
           -webkit-transition-delay: 0s;
           /* Safari and Chrome */
           -o-transition-delay: 0s;
-          /* Opera */ }
-    .map .employee:hover .employee-desk.ns .active {
+          /* Opera */
+          background-position: 0 0; }
+        .map .employee .employee-desk.ew.red .active {
+          background-position: 0 -76px; }
+        .map .employee .employee-desk.ew.blue .active {
+          background-position: 0 -152px; }
+        .map .employee .employee-desk.ew.green .active {
+          background-position: 0 -228px; }
+        .map .employee .employee-desk.ew.black .active {
+          background-position: 0 -304px; }
+        .map .employee .employee-desk.ew.white .active {
+          background-position: 0 -380px; }
+    .map .employee:hover .employee-desk.ns .active, .map .employee.active .employee-desk.ns .active {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-    .map .employee:hover .employee-desk.ew .active {
+    .map .employee:hover .employee-desk.ew .active, .map .employee.active .employee-desk.ew .active {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-    .map .employee:hover .employee-popup {
+    .map .employee:hover .employee-popup, .map .employee.active .employee-popup {
       margin-left: -10px;
       margin-top: -20px;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -444,7 +466,7 @@ body {
       -moz-animation-timing-function: step-start;
       -moz-animation-fill-mode: forwards;
       -moz-animation-name: animate-forward-new; }
-      .map .employee:hover .employee-popup .employee-profile .employee-profile-picture {
+      .map .employee:hover .employee-popup .employee-profile .employee-profile-picture, .map .employee.active .employee-popup .employee-profile .employee-profile-picture {
         width: 64px;
         height: 64px;
         margin-left: 8px;
@@ -452,11 +474,11 @@ body {
         -moz-border-radius: 36px;
         -webkit-border-radius: 36px;
         border-radius: 36px; }
-        .map .employee:hover .employee-popup .employee-profile .employee-profile-picture img.bw {
+        .map .employee:hover .employee-popup .employee-profile .employee-profile-picture img.bw, .map .employee.active .employee-popup .employee-profile .employee-profile-picture img.bw {
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
           opacity: 0;
           top: -72px; }
-      .map .employee:hover .employee-popup .employee-profile .employee-profile-data {
+      .map .employee:hover .employee-popup .employee-profile .employee-profile-data, .map .employee.active .employee-popup .employee-profile .employee-profile-data {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1;
         width: 300px;
@@ -472,7 +494,7 @@ body {
         /* Safari and Chrome */
         -o-transition-delay: 0.2s;
         /* Opera */ }
-    .map .employee:hover .employee-shadow {
+    .map .employee:hover .employee-shadow, .map .employee.active .employee-shadow {
       bottom: -15px;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
       opacity: 0;

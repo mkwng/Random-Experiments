@@ -235,7 +235,14 @@ body{
 					background:url(../images/desk-ns-active.png) no-repeat center;
 					@include transition;
 					@include opacity(0);
+					background-position: 0 0;
 				}
+
+				&.red .active{ background-position:0 -76px;}
+				&.blue .active{ background-position:0 -152px;}
+				&.green .active{ background-position:0 -228px;}
+				&.black .active{ background-position:0 -304px;}
+				&.white .active{ background-position:0 -380px;}
 			}
 
 			&.ew {
@@ -248,18 +255,29 @@ body{
 					background:url(../images/desk-ew-active.png) no-repeat center;
 					@include opacity(0);
 					@include transition;
+					background-position: 0 0;
 				}
+
+				&.red .active{ background-position:0 -76px;}
+				&.blue .active{ background-position:0 -152px;}
+				&.green .active{ background-position:0 -228px;}
+				&.black .active{ background-position:0 -304px;}
+				&.white .active{ background-position:0 -380px;}
 			} 
 		}
 
-		&:hover {
+		&:hover,&.active {
 
 			.employee-desk {
-				&.ns .active {
-				@include opacity(1);
+				&.ns {
+					.active {
+						@include opacity(1);
+					}
 				}
-				&.ew .active {
-				@include opacity(1);
+				&.ew {
+					.active {
+						@include opacity(1);
+					}
 				}
 			}
 			.employee-popup {
