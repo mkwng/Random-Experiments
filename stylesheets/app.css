@@ -106,15 +106,248 @@ img {
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
-:: Page Name 1
-:: Page Name 2
+:: Directory
+:: Profile
 */
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+body {
+  min-height: 100%;
+  height: 100%; }
+
+.navbar {
+  color: #FFFFFF;
+  margin: 0; }
+  .navbar .container {
+    width: 100%; }
+  .navbar .brand {
+    display: block;
+    background: url(../images/layout/logo.png) no-repeat;
+    margin: 20px 20px 20px 0;
+    width: 84px;
+    height: 26px;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none; }
+  .navbar .navbar-inner {
+    /*height:77px;*/
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #ff457f;
+    border-bottom: 1px solid #de0045; }
+    .navbar .navbar-inner .nav li a {
+      padding: 25px 2px 20px;
+      margin: 0 20px;
+      text-shadow: none;
+      text-transform: uppercase;
+      color: #ffdee8;
+      font-size: 12px; }
+      .navbar .navbar-inner .nav li a:hover {
+        border-bottom: 4px solid #ff125c;
+        color: white; }
+    .navbar .navbar-inner .nav li.active a {
+      background: transparent;
+      border-bottom: 4px solid #de0045;
+      color: white; }
+    .navbar .navbar-inner .profile a {
+      text-decoration: none;
+      color: #ffdee8;
+      text-shadow: none;
+      font-size: 12px; }
+      .navbar .navbar-inner .profile a:hover {
+        color: #ffffff; }
+    .navbar .navbar-inner .profile .profile-link {
+      display: block;
+      padding: 25px 2px 20px;
+      margin: 0 20px; }
+      .navbar .navbar-inner .profile .profile-link:after {
+        content: ' ';
+        height: 0;
+        position: absolute;
+        width: 0;
+        border: 5px solid transparent;
+        border-top-color: #ffdee8; }
+      .navbar .navbar-inner .profile .profile-link:hover:after {
+        border-top-color: white; }
+    .navbar .navbar-inner .profile .profile-drop {
+      position: absolute; }
+
+.row-fluid {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 /* -----------------------------------------
-   Page Name 1
+   Directory
 ----------------------------------------- */
+#directory {
+  /* .directory-person */ }
+  #directory .directory-person {
+    display: block;
+    position: relative;
+    background: #ffffff;
+    height: 110px;
+    padding: 4px;
+    border: 1px solid #d7d7d7;
+    color: #707070;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    /* Firefox 4 */
+    -webkit-transition-delay: 0s;
+    /* Safari and Chrome */
+    -o-transition-delay: 0s;
+    /* Opera */
+    margin-bottom: 20px; }
+    #directory .directory-person img {
+      float: left;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    #directory .directory-person .directory-person-color {
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 43px;
+      left: 93px;
+      font: 0/0 a;
+      color: transparent;
+      text-shadow: none;
+      border: 3px solid #ffffff;
+      -moz-border-radius: 12px;
+      -webkit-border-radius: 12px;
+      border-radius: 12px; }
+      #directory .directory-person .directory-person-color.green {
+        background-color: #27c654;
+        -moz-box-shadow: inset 0 0 3px black;
+        -webkit-box-shadow: inset 0 0 3px black;
+        box-shadow: inset 0 0 3px black; }
+      #directory .directory-person .directory-person-color.red {
+        background-color: #e23a3b;
+        -moz-box-shadow: inset 0 0 3px #190404;
+        -webkit-box-shadow: inset 0 0 3px #190404;
+        box-shadow: inset 0 0 3px #190404; }
+      #directory .directory-person .directory-person-color.blue {
+        background-color: #37a2ca;
+        -moz-box-shadow: inset 0 0 3px #000102;
+        -webkit-box-shadow: inset 0 0 3px #000102;
+        box-shadow: inset 0 0 3px #000102; }
+      #directory .directory-person .directory-person-color.black {
+        background-color: #3a3939;
+        -moz-box-shadow: inset 0 0 3px black;
+        -webkit-box-shadow: inset 0 0 3px black;
+        box-shadow: inset 0 0 3px black; }
+      #directory .directory-person .directory-person-color.white {
+        background-color: #f6f5f5;
+        -moz-box-shadow: inset 0 0 3px #7c7070;
+        -webkit-box-shadow: inset 0 0 3px #7c7070;
+        box-shadow: inset 0 0 3px #7c7070; }
+    #directory .directory-person .directory-person-info {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100px;
+      padding-left: 20px; }
+      #directory .directory-person .directory-person-info .name {
+        color: #ff457f;
+        text-transform: uppercase;
+        font-weight: bold; }
+    #directory .directory-person .directory-person-quote {
+      display: none; }
+    #directory .directory-person:hover {
+      text-decoration: none;
+      cursor: pointer;
+      border-color: #a4a4a4;
+      -moz-box-shadow: 0px 2px 5px #d7d7d7;
+      -webkit-box-shadow: 0px 2px 5px #d7d7d7;
+      box-shadow: 0px 2px 5px #d7d7d7; }
+      #directory .directory-person:hover .directory-person-info .name {
+        color: #ff2b6d; }
+    #directory .directory-person:active {
+      top: 1px;
+      border-color: #bebebe;
+      -moz-box-shadow: 0px 1px 3px #d7d7d7;
+      -webkit-box-shadow: 0px 1px 3px #d7d7d7;
+      box-shadow: 0px 1px 3px #d7d7d7;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      -ms-transition: none;
+      transition: none;
+      transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      /* Firefox 4 */
+      -webkit-transition-delay: 0s;
+      /* Safari and Chrome */
+      -o-transition-delay: 0s;
+      /* Opera */ }
+    #directory .directory-person:nth-child(4n+1) {
+      margin-left: 0; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #directory .directory-person {
+        float: left;
+        width: 45%;
+        *width: 45%;
+        margin-left: 3.3333333%; }
+        #directory .directory-person:nth-child(4n+1) {
+          margin-left: 3.3333333%; } }
+    @media (min-width: 768px) and (max-width: 979px) {
+      #directory .directory-person {
+        height: auto; }
+        #directory .directory-person img {
+          width: 100%; }
+        #directory .directory-person .directory-person-color {
+          position: relative;
+          clear: both;
+          z-index: 2;
+          top: -12px;
+          left: 50%;
+          margin-left: -12px; }
+        #directory .directory-person .directory-person-info {
+          clear: both;
+          padding-left: 10px;
+          padding-top: 0px;
+          position: relative;
+          height: 55px;
+          top: -6px; }
+          #directory .directory-person .directory-person-info .name {
+            color: #ff457f;
+            text-transform: uppercase;
+            font-weight: bold; }
+        #directory .directory-person .directory-person-quote {
+          display: none; } }
+  #directory .directory-filter {
+    padding: 20px;
+    border: 1px solid #d7d7d7;
+    color: #707070;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    /* Firefox 4 */
+    -webkit-transition-delay: 0s;
+    /* Safari and Chrome */
+    -o-transition-delay: 0s;
+    /* Opera */
+    margin: 20px auto 40px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#fafafa)); }
+
 /* -----------------------------------------
-   Page Name 2
+   Profile
 ----------------------------------------- */
+#map {
+  overflow: hidden; }

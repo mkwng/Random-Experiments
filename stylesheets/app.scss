@@ -34,25 +34,275 @@ img { -ms-interpolation-mode: bicubic; }
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
-:: Page Name 1
-:: Page Name 2
+:: Directory
+:: Profile
 */
 
 
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+$grey: #d7d7d7;
+$grey2: #707070;
+$pink: #ff457f;
+$t-green: #27c654;
+$t-white: #f6f5f5;
+$t-red: #e23a3b;
+$t-blue: #37a2ca;
+$t-black: #3a3939;
+
+@mixin border-radius($arg:50px) {
+	-moz-border-radius: $arg;
+    -webkit-border-radius: $arg;
+    border-radius: $arg;
+}
+@mixin box-shadow($arg:-5px -5px #888) {
+	-moz-box-shadow: $arg;
+	-webkit-box-shadow: $arg;
+	box-shadow: $arg;
+}
+@mixin transition($arg:all .15s ease-in-out, $delay:0s) {
+	-webkit-transition: $arg;
+    -moz-transition: $arg;
+    -o-transition: $arg;
+    -ms-transition: $arg;
+    transition: $arg;
+
+    transition-delay: $delay;
+	-moz-transition-delay: $delay; /* Firefox 4 */
+	-webkit-transition-delay: $delay; /* Safari and Chrome */
+	-o-transition-delay: $delay; /* Opera */
+}
+@mixin box-shadow($arg:0px 2px 5px $grey) {
+	-moz-box-shadow: $arg;
+	-webkit-box-shadow: $arg;
+	box-shadow: $arg;
+}
+
+body {
+	min-height: 100%;
+	height:100%;
+}
+.navbar{
+	color:#FFFFFF;
+	margin:0;
+	.container{
+		width:100%;
+	}
+
+	.brand {
+		display:block;
+		background:url(../images/layout/logo.png) no-repeat;
+		margin:20px 20px 20px 0;
+		width:84px;
+		height:26px;
+		font: 0/0 a;
+		color: transparent;
+		text-shadow: none;
+	}
+	.navbar-inner{
+		/*height:77px;*/
+		@include border-radius(0px);
+		background:$pink;
+		border-bottom:1px solid darken($pink,20%);
+
+		.nav {
+			li {
+				a {
+					padding:25px 2px 20px;
+					margin:0 20px;
+					text-shadow:none;
+					text-transform:uppercase;
+					color:lighten($pink,30%);
+					font-size:12px;
+					&:hover{
+						border-bottom:4px solid darken($pink,10%);
+						color:white;
+					}
+				}
+				&.active {
+					a {
+						background:transparent;
+						border-bottom:4px solid darken($pink,20%);
+						color:white;
+					}
+				}
+			}
+		}
+		.profile {
+			a{
+				text-decoration:none;
+				color:lighten($pink,30%);
+				text-shadow:none;
+				font-size:12px;
+				&:hover{
+					color:#ffffff;
+				}
+			}
+			.profile-link {
+				display:block;
+				padding:25px 2px 20px;
+				margin:0 20px;
+				&:after {
+					content: ' ';
+					height: 0;
+					position: absolute;
+					width: 0;
+
+					border: 5px solid transparent;
+					border-top-color: lighten($pink,30%);
+				}
+				&:hover {
+					&:after{border-top-color: white;}
+				}
+			}
+			.profile-drop {
+				position:absolute;
+			}
+		}
+	}
+}
+
+.row-fluid {max-width:1200px;margin:0 auto;}
+
+/* -----------------------------------------
+   Directory
+----------------------------------------- */
+#directory{
+
+	.directory-person {
+		display:block;
+		position:relative;
+		background:#ffffff;
+		height:110px;
+		padding:4px;
+		border:1px solid $grey;
+		color:$grey2;
+		@include border-radius(5px);
+		@include transition;
+		margin-bottom:20px;
+
+		img {
+			float:left;
+			@include border-radius(3px);
+		}
+		.directory-person-color {
+			display:block;
+			position:absolute;
+			width:24px;
+			height:24px;
+			top:43px;
+			left:93px;
+			font: 0/0 a;
+			color: transparent;
+			text-shadow: none;
+			border:3px solid #ffffff;
+			@include border-radius(12px);
+			
+			&.green{background-color:$t-green; @include box-shadow(inset 0 0 3px darken($t-green,50%));}
+			&.red{background-color:$t-red; @include box-shadow(inset 0 0 3px darken($t-red,50%));}
+			&.blue{background-color:$t-blue; @include box-shadow(inset 0 0 3px darken($t-blue,50%));}
+			&.black{background-color:$t-black; @include box-shadow(inset 0 0 3px darken($t-black,50%));}
+			&.white{background-color:$t-white; @include box-shadow(inset 0 0 3px darken($t-white,50%));}
+		}
+		.directory-person-info {
+			display: table-cell;
+			vertical-align: middle;
+			height:100px;
+			padding-left:20px;
+			.name {
+				color:$pink;
+				text-transform:uppercase;
+				font-weight:bold;
+			}
+		}
+		.directory-person-quote {
+			display:none;
+		}
+
+		&:hover {
+			.directory-person-info {
+				.name{
+					color:darken($pink,5%);
+				}
+			}
+			text-decoration:none;
+			cursor:pointer;
+			border-color:darken($grey,20%);
+			@include box-shadow;
+		}
+		&:active {
+			top:1px;
+			border-color:darken($grey,10%);
+			@include box-shadow(0px 1px 3px $grey);
+			@include transition(none);
+		}
+
+    	&:nth-child(4n+1) {margin-left:0;}
+
+		@media (max-width: 480px) {
+
+		}
+		@media (min-width: 481px) and (max-width: 767px) {
+			float:left;
+		    width: 45%;
+		    *width: 45%;
+		    margin-left:3.3333333%;
+
+    		&:nth-child(4n+1) {margin-left:3.3333333%;}
+		}
+		@media (min-width: 768px) and (max-width: 979px) {
+			height:auto;
+			img {
+				width:100%;
+			}
+			.directory-person-color {
+				position:relative;
+				clear:both;
+				z-index:2;
+				top:-12px;
+				left:50%;
+				margin-left:-12px;
+			}
+			.directory-person-info {
+				clear:both;
+				padding-left:10px;
+				padding-top:0px;
+				position: relative;
+				height: 55px;
+				top: -6px;
+				.name {
+					color:$pink;
+					text-transform:uppercase;
+					font-weight:bold;
+				}
+			}
+			.directory-person-quote {
+				display:none;
+			}
+
+
+		}
+	} /* .directory-person */
+
+	.directory-filter {
+		padding:20px;
+		border:1px solid $grey;
+		color:$grey2;
+		@include border-radius(5px);
+		@include transition;
+		margin:20px auto 40px;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fafafa));
+	}
+
+
+}
 
 
 
 /* -----------------------------------------
-   Page Name 1
+   Profile
 ----------------------------------------- */
-
-
-
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
-
+#map {
+	overflow:hidden;
+}

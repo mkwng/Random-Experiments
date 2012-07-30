@@ -14,8 +14,9 @@
   <title>Directory</title>
 
   <!-- Included CSS Files -->
-  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap.css">
   <link rel="stylesheet" href="stylesheets/bootstrap-responsive.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
 
   <script src="js/modernizr.foundation.js"></script>
 
@@ -27,11 +28,256 @@
 </head>
 <body>
 
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+<!--           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a> -->
+          <a class="brand" href="#">OdoDirectory</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Directory</a></li>
+              <li><a href="#">Seating</a></li>
+            </ul>
+            <div class="profile pull-right">
+              <a class="profile-link" href="#">Theo Folinas</a>
+              <ul class="profile-drop">
+                <li><a href="#">My profile</a></li>
+                <li><a href="#">Edit profile</a></li>
+                <li><a href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="directory" class="container-fluid">
+
+    <div class="directory-filter row-fluid">
+        <div class="filter-by-discipline filter span2">
+            <span>Discipline:</span>
+            <div class="btn-group">
+              <a class="btn no-pjax dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="text">All</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="no-pjax">All</a></li>                
+                    <li><a href="#" data-value="4" class="no-pjax">Administration &amp; Operations</a></li>
+                    <li><a href="#" data-value="9" class="no-pjax">Founders</a></li>
+                    <li><a href="#" data-value="8" class="no-pjax">Human Resources</a></li>
+                    <li><a href="#" data-value="3" class="no-pjax">Interaction Design</a></li>
+                    <li><a href="#" data-value="7" class="no-pjax">Marketing</a></li>
+                    <li><a href="#" data-value="6" class="no-pjax">Project Management</a></li>
+                    <li><a href="#" data-value="5" class="no-pjax">Strategy</a></li>
+                    <li><a href="#" data-value="1" class="no-pjax">Technology</a></li>
+                    <li><a href="#" data-value="2" class="no-pjax">Visual Design</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="filter-by-team filter span2">
+            <span>Team:</span>
+            <div class="btn-group">
+              <a class="btn no-pjax dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="text">All</span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="no-pjax">All</a></li>
+                    <li><a href="#" data-value="5" class="no-pjax">Team Black</a></li>
+                    <li><a href="#" data-value="3" class="no-pjax">Team Blue</a></li>
+                    <li><a href="#" data-value="4" class="no-pjax">Team Green</a></li>
+                    <li><a href="#" data-value="2" class="no-pjax">Team Red</a></li>
+                    <li><a href="#" data-value="1" class="no-pjax">Team White</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="sort filter span4">
+            <span>Sort by:</span>
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button class="btn">First name</button>
+              <button class="btn active">Last name</button>
+              <button class="btn">Start date</button>
+            </div>
+        </div>
+        <div class="filter-by-name filter span2">
+            <span>Search:</span>
+            <div>
+            <input id="prependedInput" size="16" type="text" style="width:auto; margin-bottom:0">
+            </div>
+        </div>
+      </div> <!-- /row -->
+
+      <div class="row-fluid">
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color blue">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color white">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color black">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color red">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+        
+        <a class="directory-person span3">
+          <img src="images/people/Guthrie-Dolin.jpg" />
+          <span class="directory-person-color green">Team Green</span>
+          <div class="directory-person-info">
+            <span class="name">Guthrie Dolin</span> <br />
+            <span class="title">Executive Director of Strategy</span>
+          </div>
+          <span class="directory-person-quote">Lorem ipsum dolor sit</span>
+        </a>
+      </div> <!-- /row -->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
 
 
-  <!-- Included JS Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/app.js"></script>
+<!-- Included JS Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 
 </body>
 </html>
